@@ -553,9 +553,9 @@ void Cubie::render(bool isPressed)
     colorDirection["initright"] = name % 10;
     glPushName(name);
     setMaterial(initFaceColors->right, spec1, amb1);
-    glTranslated(initX, initY, initZ);
-    glRotated(90.0, 0.0, 1.0, 0.0);
-    glTranslated(-initX, -initY, -initZ);
+    glTranslatef(initX, initY, initZ);
+    glRotatef(90.0, 0.0, 1.0, 0.0);
+    glTranslatef(-initX, -initY, -initZ);
     if (initFaceColors->right != 6) roundSq.drawSmooth(false);
     glPopName();
     glPopMatrix();
@@ -567,9 +567,9 @@ void Cubie::render(bool isPressed)
     colorDirection["initback"] = name % 10;
     glPushName(name);
     setMaterial(initFaceColors->back, spec1, amb1);
-    glTranslated(initX, initY, initZ);
-    glRotated(180.0, 0.0, 1.0, 0.0);
-    glTranslated(-initX, -initY, -initZ);
+    glTranslatef(initX, initY, initZ);
+    glRotatef(180.0, 0.0, 1.0, 0.0);
+    glTranslatef(-initX, -initY, -initZ);
     if (initFaceColors->back != 6) roundSq.drawSmooth(false);
     glPopName();
     glPopMatrix();
@@ -581,9 +581,9 @@ void Cubie::render(bool isPressed)
     colorDirection["initleft"] = name % 10;
     glPushName(name);
     setMaterial(initFaceColors->left, spec1, amb1);
-    glTranslated(initX, initY, initZ);
-    glRotated(-90.0, 0.0, 1.0, 0.0);
-    glTranslated(-initX, -initY, -initZ);
+    glTranslatef(initX, initY, initZ);
+    glRotatef(-90.0, 0.0, 1.0, 0.0);
+    glTranslatef(-initX, -initY, -initZ);
     if (initFaceColors->left != 6) roundSq.drawSmooth(false);
     glPopName();
     glPopMatrix();
@@ -595,9 +595,9 @@ void Cubie::render(bool isPressed)
     colorDirection["inittop"] = name % 10;
     glPushName(name);
     setMaterial(initFaceColors->top, spec1, amb1);
-    glTranslated(initX, initY, initZ);
-    glRotated(-90.0, 1.0, 0.0, 0.0);
-    glTranslated(-initX, -initY, -initZ);
+    glTranslatef(initX, initY, initZ);
+    glRotatef(-90.0, 1.0, 0.0, 0.0);
+    glTranslatef(-initX, -initY, -initZ);
     if (initFaceColors->top != 6) roundSq.drawSmooth(false);
     glPopName();
     glPopMatrix();
@@ -609,9 +609,9 @@ void Cubie::render(bool isPressed)
     colorDirection["initbottom"] = name % 10;
     glPushName(name);
     setMaterial(initFaceColors->bottom, spec1, amb1);
-    glTranslated(initX, initY, initZ);
-    glRotated(90.0, 1.0, 0.0, 0.0);
-    glTranslated(-initX, -initY, -initZ);
+    glTranslatef(initX, initY, initZ);
+    glRotatef(90.0, 1.0, 0.0, 0.0);
+    glTranslatef(-initX, -initY, -initZ);
     if (initFaceColors->bottom != 6) roundSq.drawSmooth(false);
     glPopName();
     glPopMatrix();
@@ -619,7 +619,7 @@ void Cubie::render(bool isPressed)
 
     glPushMatrix();
     setMaterial(6, spec0, amb0);
-    glTranslated(initX, initY, initZ);
+    glTranslatef(initX, initY, initZ);
     cubie.drawSmooth(true);
     glPopMatrix();
 

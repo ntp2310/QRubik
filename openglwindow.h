@@ -43,8 +43,6 @@ protected:
     Matrix4 m_model;
     Matrix4 randRotation;
 
-    GLuint shadowMapTexture;
-
     Vector3 lastPos, curPos;
     Vector3 startPos, endPos;
 
@@ -70,7 +68,6 @@ public:
     bool    track;
     bool    configMode, facedir;
     float   aspect, angle, speedup = 1.5;
-    float   shadowMapSize;
     int     coord;
     int     selectedCubie;
     int     currentColor;

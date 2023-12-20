@@ -554,8 +554,8 @@ void OpenGLWindow::mouseMoveEvent(QMouseEvent *event)
             norm.normalized();
         else return;
 
-        if (angle < -180) angle += 180;
-        if (angle > 180) angle -= 180;
+        if (angle < -180.0f) angle += 180.0f;
+        if (angle > 180.0f) angle -= 180.0f;
 
         float dis = endPos.distance(startPos);
         startPos = endPos;
