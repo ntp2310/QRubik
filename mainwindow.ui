@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Segoe UI Semibold</family>
+    <bold>true</bold>
+    <stylestrategy>PreferAntialias</stylestrategy>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>QRubix</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="src.qrc">
+    <normaloff>:/Resources/rubik-_4_.ico</normaloff>:/Resources/rubik-_4_.ico</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="leftMargin">
+     <number>6</number>
+    </property>
+    <property name="topMargin">
+     <number>6</number>
+    </property>
+    <property name="rightMargin">
+     <number>6</number>
+    </property>
+    <property name="bottomMargin">
+     <number>6</number>
+    </property>
+    <item>
+     <widget class="QWidget" name="GLwidget" native="true">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>600</width>
+        <height>500</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QTextEdit" name="textEdit">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Cascadia Code</family>
+            <bold>false</bold>
+            <stylestrategy>PreferAntialias</stylestrategy>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: 1px solid;
+border-color: rgb(80, 80, 80);
+background-color: rgb(60, 60, 60);
+border-radius: 4px;
+min-width: 78px;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QPushButton" name="execute">
+            <property name="font">
+             <font>
+              <family>Segoe UI Historic</family>
+              <italic>false</italic>
+              <bold>false</bold>
+              <stylestrategy>PreferAntialias</stylestrategy>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    border: 1px solid;
+    border-radius: 4px;
+    min-width: 80px;
+	background-color: rgb(60, 60, 60);
+	border-color: rgb(80, 80, 80);
+}
+QPushButton:pressed {
+    
+	background-color: rgb(50, 50, 50);
+}
+QPushButton:flat {   
+	border: none;
+}
+QPushButton:hover:!pressed {
+	
+	background-color: rgb(70, 70, 70);
+}</string>
+            </property>
+            <property name="text">
+             <string>Execute</string>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pause">
+            <property name="font">
+             <font>
+              <family>Segoe UI Historic</family>
+              <italic>false</italic>
+              <bold>false</bold>
+              <stylestrategy>PreferAntialias</stylestrategy>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    border: 1px solid;
+    border-radius: 4px;
+    min-width: 80px;
+	background-color: rgb(60, 60, 60);
+	border-color: rgb(80, 80, 80);
+}
+QPushButton:pressed {
+    
+	background-color: rgb(50, 50, 50);
+}
+QPushButton:flat {   
+	border: none;
+}
+QPushButton:hover:!pressed {
+	
+	background-color: rgb(70, 70, 70);
+}</string>
+            </property>
+            <property name="text">
+             <string>Pause</string>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QPushButton" name="solve">
+          <property name="font">
+           <font>
+            <family>Segoe UI Historic</family>
+            <bold>false</bold>
+            <stylestrategy>PreferAntialias</stylestrategy>
+           </font>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    border: 1px solid;
+    border-radius: 4px;
+    min-width: 80px;
+	background-color: rgb(60, 60, 60);
+	border-color: rgb(80, 80, 80);
+}
+QPushButton:pressed {
+    
+	background-color: rgb(50, 50, 50);
+}
+QPushButton:flat {   
+	border: none;
+}
+QPushButton:hover:!pressed {
+	
+	background-color: rgb(70, 70, 70);
+}</string>
+          </property>
+          <property name="text">
+           <string>Solution</string>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="camera">
+          <property name="font">
+           <font>
+            <family>Segoe UI Historic</family>
+            <bold>false</bold>
+            <stylestrategy>PreferAntialias</stylestrategy>
+           </font>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    border: 1px solid;
+    border-radius: 4px;
+    min-width: 80px;
+	background-color: rgb(60, 60, 60);
+	border-color: rgb(80, 80, 80);
+}
+QPushButton:pressed {
+    
+	background-color: rgb(50, 50, 50);
+}
+QPushButton:flat {   
+	border: none;
+}
+QPushButton:hover:!pressed {
+	
+	background-color: rgb(70, 70, 70);
+}</string>
+          </property>
+          <property name="text">
+           <string>Camera</string>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="font">
+             <font>
+              <family>Segoe UI Historic</family>
+              <pointsize>9</pointsize>
+              <italic>false</italic>
+              <bold>false</bold>
+              <stylestrategy>PreferAntialias</stylestrategy>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>Color:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="currentColor">
+            <property name="font">
+             <font>
+              <family>Segoe UI Historic</family>
+              <bold>false</bold>
+              <stylestrategy>PreferAntialias</stylestrategy>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QComboBox {
+    border: 1px solid;
+    border-radius: 3px;
+    padding: 1px 18px 1px 3px;
+    min-width: 3em;
+	background-color: rgb(60, 60, 60);
+	border-color: rgb(80, 80, 80);
+}
+QComboBox::drop-down {
+	 border:0px;
+	 subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+
+    border-left-width: 1px;
+    border-left-color: darkgray;
+    border-left-style: solid; /* just a single line */
+    border-top-right-radius: 3px; /* same radius as the QComboBox */
+    border-bottom-right-radius: 3px;
+}
+QComboBox::down-arrow {
+    image: url(:/Resources/drop-down-arrow.png);
+	 width:6px;
+	 height:6px;
+}
+QComboBox:!editable, QComboBox::drop-down:editable {
+}
+
+/* QComboBox gets the &quot;on&quot; state when the popup is open */
+QComboBox:!editable:on, QComboBox::drop-down:editable:on {
+}
+QComboBox:on { /* shift the text when the popup opens */
+    padding-top: 3px;
+    padding-left: 4px;
+}
+QComboBox QAbstractItemView {
+    border: 1px solid;
+    selection-background-color: lightgray;
+}
+
+
+
+</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox">
+            <property name="font">
+             <font>
+              <family>Segoe UI Historic</family>
+              <pointsize>9</pointsize>
+              <italic>false</italic>
+              <bold>false</bold>
+              <stylestrategy>PreferAntialias</stylestrategy>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QCheckBox {
+    spacing: 5px;
+}</string>
+            </property>
+            <property name="text">
+             <string>On</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="facedir">
+          <property name="font">
+           <font>
+            <family>Segoe UI Historic</family>
+            <pointsize>9</pointsize>
+            <italic>false</italic>
+            <bold>false</bold>
+            <stylestrategy>PreferDefault</stylestrategy>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+    spacing: 5px;
+}</string>
+          </property>
+          <property name="text">
+           <string>Face Direction</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton">
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+          <bold>false</bold>
+          <stylestrategy>PreferAntialias</stylestrategy>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    border: 1px solid;
+    border-radius: 4px;
+    min-width: 80px;
+	background-color: rgb(60, 60, 60);
+	border-color: rgb(80, 80, 80);
+}
+QPushButton:pressed {
+    
+	background-color: rgb(50, 50, 50);
+}
+QPushButton:flat {   
+	border: none;
+}
+QPushButton:hover:!pressed {
+	
+	background-color: rgb(70, 70, 70);
+}</string>
+        </property>
+        <property name="text">
+         <string>Quit</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="src.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>released()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>752</x>
+     <y>581</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>753</x>
+     <y>480</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

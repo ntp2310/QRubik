@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Resources/drop-down-arrow.png</file>
+        <file>Resources/rubik-_4_.ico</file>
+    </qresource>
+</RCC>
